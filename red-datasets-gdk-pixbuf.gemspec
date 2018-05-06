@@ -9,7 +9,7 @@ require "datasets-gdk-pixbuf/version"
 
 Gem::Specification.new do |spec|
   spec.name = "red-datasets-gdk-pixbuf"
-  spec.version = DatasetsGdk-Pixbuf::VERSION
+  spec.version = DatasetsGdkPixbuf::VERSION
   spec.homepage = "https://github.com/red-data-tools/red-datasets-gdk-pixbuf"
   spec.authors = ["Kouhei Sutou"]
   spec.email = ["kou@clear-code.com"]
