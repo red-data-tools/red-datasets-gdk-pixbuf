@@ -6,7 +6,8 @@ module DatasetsGdkPixbuf
       n_channels = 3
       width = 32
       height = 32
-      rgb_data = pixels.each_slice(1024).to_a.transpose.flatten.pack("C*")
+      color_size = width * height
+      rgb_data = pixels.each_slice(color_size).to_a.transpose.flatten.pack("C*")
       GdkPixbuf::Pixbuf.new(:data => rgb_data,
                             :row_stride => width * n_channels,
                             :width => width,
