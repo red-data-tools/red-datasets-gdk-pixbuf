@@ -7,7 +7,9 @@ module DatasetsGdkPixbuf
       width = 32
       height = 32
       color_size = width * height
-      rgb_data = pixels.each_slice(color_size).to_a.transpose.flatten.pack("C*")
+      rgb_data = pixels.each_slice(color_size).to_a.transpose.flatten
+      # TODO: Remove the following line when gdk_pixbuf2 3.3.0 is released.
+      rgb_data = rgb_data.pack("C*")
       GdkPixbuf::Pixbuf.new(:data => rgb_data,
                             :row_stride => width * n_channels,
                             :width => width,
