@@ -2,6 +2,10 @@ notifications:
   webhooks:
     - https://webhook.commit-email.info/
 
+addons:
+  apt:
+    update: true
+
 language: ruby
 
 rvm:
