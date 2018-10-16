@@ -1,4 +1,4 @@
-class IrisTest < Test::Unit::TestCase
+class CIFARTest < Test::Unit::TestCase
   include Helper::Sandbox
 
   def setup_raw_data(data)
